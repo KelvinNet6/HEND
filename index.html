@@ -1,1 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HEND Clothing Store</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            background-color: #000;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        nav {
+            background-color: #111;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ffd700;
+        }
+        .slideshow {
+            max-width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .slideshow img {
+            width: 100%;
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: auto;
+        }
+        .slideshow img.active {
+            display: block;
+            position: relative;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .item {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .item img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .order-button {
+            background-color: black;
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: background-color 0.3s ease;
+        }
+        .order-button:hover {
+            background-color: #222;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        footer a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HEND Clothing</h1>
+        <p>Elevate your streetwear game – bold, clean, confident.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <div class="slideshow">
+        <img src="/mnt/data/A_digital_photograph_displays_a_matching_black_lon.png" class="active" alt="Slide 1">
+        <img src="/mnt/data/A_photograph_presents_a_matching_white_long-sleeve.png" alt="Slide 2">
+        <img src="/mnt/data/A_digital_photograph_showcases_a_matching_yellow_s.png" alt="Slide 3">
+    </div>
+
+    <div class="container">
+        <div class="item">
+            <img src="/mnt/data/A_digital_photograph_displays_a_matching_black_lon.png" alt="Black HEND Set">
+            <h3>Black HEND Set</h3>
+            <button class="order-button" onclick="location.href='checkout.html'">Order Now</button>
+        </div>
+        <div class="item">
+            <img src="/mnt/data/A_photograph_presents_a_matching_white_long-sleeve.png" alt="White HEND Set">
+            <h3>White HEND Set</h3>
+            <button class="order-button" onclick="location.href='checkout.html'">Order Now</button>
+        </div>
+        <div class="item">
+            <img src="/mnt/data/A_digital_photograph_features_a_matching_brown_lon.png" alt="Brown HEND Set">
+            <h3>Brown HEND Set</h3>
+            <button class="order-button" onclick="location.href='checkout.html'">Order Now</button>
+        </div>
+        <div class="item">
+            <img src="/mnt/data/A_digital_photograph_showcases_a_matching_light_bl.png" alt="Blue HEND Set">
+            <h3>Blue HEND Set</h3>
+            <button class="order-button" onclick="location.href='checkout.html'">Order Now</button>
+        </div>
+        <div class="item">
+            <img src="/mnt/data/A_digital_photograph_displays_a_matching_green_cre.png" alt="Green HEND Set">
+            <h3>Green HEND Set</h3>
+            <button class="order-button" onclick="location.href='checkout.html'">Order Now</button>
+        </div>
+        <div class="item">
+            <img src="/mnt/data/A_digital_photograph_features_a_matching_pink_HEND.png" alt="Pink HEND Set">
+            <h3>Pink HEND Set</h3>
+            <button class="order-button" onclick="location.href='checkout.html'">Order Now</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 HEND Clothing. Developed by <a href="https://www.instagram.com/krlvin._" target="_blank">Krlvin</a>.</p>
+    </footer>
+</body>
+</html>
 
