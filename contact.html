@@ -12,33 +12,45 @@
         <h1>Contact Us</h1>
     </header>
 
-     <nav>
+    <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact Us</a>
     </nav>
     
-    <div class="contact-container">
+    <main class="contact-container">
         <div class="contact-image">
-            <img src="HENDBLUE.png" alt="HEND Contact">
+            <img src="HENDBLUE.png" alt="HEND Clothing - Contact">
         </div>
+
         <div class="contact-form">
-        <form action="https://formspree.io/f/xanokzaq" method="POST">
-              <label for="name">Name</label>
-                  <input type="text" name="name" required>
+            <h2>Get in Touch</h2>
+            <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
 
-                     <label for="email">Email</label>
-                     <input type="email" name="email" required>
+            <form action="https://formspree.io/f/xanokzaq" method="POST" novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
 
-                     <label for="message">Message</label>
-                     <textarea name="message" rows="5" required></textarea>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
 
-                     <button type="submit">Send Message</button>
-      </form>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
         </div>
-    </div>
-     <footer>
-        <p>&copy; 2025 HEND Clothing. Developed by <a href="https://www.instagram.com/krlvin._" target="_blank">Krlvin</a>.<br><br> Cloth Manufactured by <a href="https://www.vfcollective.co.za" target="_blank">VF Collective</a>.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HEND Clothing. Developed by <a href="https://www.instagram.com/krlvin._" target="_blank">Krlvin</a>.<br><br>
+        Cloth Manufactured by <a href="https://www.vfcollective.co.za" target="_blank">VF Collective</a>.</p>
     </footer>
 </body>
 </html>
