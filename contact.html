@@ -3,124 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact – HEND Clothing</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Google Font – Urban / Street‑wear vibe -->
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Contact - HEND Clothing</title>
 </head>
 <body>
+    <header>
+        <img src="HENDLOGO.png" alt="HEND Logo" style="max-height: 80px; margin-bottom: 10px;">
+        <h1>Contact Us</h1>
+    </header>
 
-<header class="site-header">
-    <img src="HENDLOGO.png" alt="HEND Logo" class="logo">
-    <h1>CONTACT US</h1>
-</header>
-
-<nav class="site-nav">
-    <a href="index.html">HOME</a>
-    <a href="about.html">ABOUT</a>
-    <a href="contact.html">CONTACT</a>
-</nav>
-
-<main class="contact-section">
-
-    <!-- LEFT – HERO IMAGE (street‑wear model) -->
-    <div class="contact-hero">
-        <img src="HENDBLUE.png" alt="HEND Streetwear">
-    </div>
-
-    <!-- RIGHT – FORM -->
-    <section class="contact-form-wrapper">
-        <h2>DROP US A LINE</h2>
-        <p class="subtitle">Got a question, collab idea, or just wanna talk streetwear? Hit us up.</p>
-
-        <form action="https://formspree.io/f/xanokzaq" method="POST" class="ecom-form" novalidate>
-
-            <div class="input-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="e.g. JAY K" required>
-                <span class="error-msg"></span>
-            </div>
-
-            <div class="input-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="jay@example.com" required>
-                <span class="error-msg"></span>
-            </div>
-
-            <div class="input-group">
-                <label for="subject">Subject</label>
-                <select id="subject" name="subject">
-                    <option value="">Choose one…</option>
-                    <option value="order">Order Inquiry</option>
-                    <option value="collab">Collaboration</option>
-                    <option value="wholesale">Wholesale</option>
-                    <option value="general">General</option>
-                </select>
-            </div>
-
-            <div class="input-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Spill the tea…" required></textarea>
-                <span class="error-msg"></span>
-            </div>
-
-            <button type="submit" class="cta-btn">SEND IT</button>
-        </form>
-
-        <div class="form-success hidden">
-            <h3>Message Sent!</h3>
-            <p>We’ll hit you back ASAP.</p>
-            <a href="index.html" class="back-link">← Back to Shop</a>
+     <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    
+    <div class="contact-container">
+        <div class="contact-image">
+            <img src="HENDBLUE.png" alt="HEND Contact">
         </div>
-    </section>
-</main>
+        <div class="contact-form">
+        <form action="https://formspree.io/f/xanokzaq" method="POST">
+              <label for="name">Name</label>
+                  <input type="text" name="name" required>
 
-<footer class="site-footer">
-    <p>© 2025 HEND Clothing. Built by <a href="https://krlvin.net" target="_blank">Krlvin</a>.<br>
-       Cloth by <a href="https://www.vfcollective.co.za" target="_blank">VF Collective</a>.</p>
-</footer>
+                     <label for="email">Email</label>
+                     <input type="email" name="email" required>
 
-<script>
-/* Simple client‑side validation + success UI */
-const form = document.querySelector('.ecom-form');
-const success = document.querySelector('.form-success');
+                     <label for="message">Message</label>
+                     <textarea name="message" rows="5" required></textarea>
 
-form.addEventListener('submit', async e => {
-    e.preventDefault();
-    // Reset errors
-    document.querySelectorAll('.error-msg').forEach(el => el.textContent = '');
-
-    let valid = true;
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const message = form.message.value.trim();
-
-    if (!name) { valid = false; showError(form.name, 'Name required'); }
-    if (!email || !/^\S+@\S+\.\S+$/.test(email)) { valid = false; showError(form.email, 'Valid email needed'); }
-    if (!message) { valid = false; showError(form.message, 'Message can’t be empty'); }
-
-    if (!valid) return;
-
-    // Formspree submission
-    const resp = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-    });
-
-    if (resp.ok) {
-        form.classList.add('hidden');
-        success.classList.remove('hidden');
-    } else {
-        alert('Oops – something went wrong. Try again.');
-    }
-});
-
-function showError(input, msg) {
-    const err = input.parentElement.querySelector('.error-msg');
-    err.textContent = msg;
-}
-</script>
-
+                     <button type="submit">Send Message</button>
+      </form>
+        </div>
+    </div>
+     <footer>
+        <p>&copy; 2025 HEND Clothing. Developed by <a href="https://krlvin.net/" target="_blank">Krlvin</a>.<br><br> Cloth Manufactured by <a href="https://www.vfcollective.co.za" target="_blank">VF Collective</a>.</p>
+    </footer>
 </body>
 </html>
